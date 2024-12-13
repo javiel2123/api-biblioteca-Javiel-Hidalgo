@@ -4,6 +4,11 @@ const cors = require('cors');
 // Crear la aplicación Express
 const app = express();
 
+app.get('/libros', (req, res) => {
+  res.json(libros.map(libro => libro.informacion()));
+});
+
+
 // Usar CORS
 app.use(cors());
 app.use(cors({ origin: 'http://localhost:3008' }));
