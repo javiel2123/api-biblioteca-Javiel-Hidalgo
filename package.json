@@ -1,16 +1,19 @@
 {
-  "dependencies": {
-    "express": "^4.21.2"
-  },
   "name": "biblioteca",
   "version": "1.0.0",
-  "main": "biblioteca.js",
-  "devDependencies": {},
+  "description": "API de Biblioteca con Express",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "keywords": [],
+  "dependencies": {
+    "express": "^4.17.1",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "14.x"
+  },
   "author": "",
-  "license": "ISC",
-  "description": ""
+  "license": "ISC"
 }

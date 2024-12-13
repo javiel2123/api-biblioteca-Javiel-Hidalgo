@@ -4,10 +4,9 @@ const cors = require('cors');
 // Crear la aplicación Express
 const app = express();
 
-
+// Usar CORS
 app.use(cors());
 app.use(cors({ origin: 'http://localhost:3008' }));
-
 
 // Clase Autor
 class Autor {
@@ -145,7 +144,7 @@ app.post('/libros/devolver/:id', (req, res) => {
 });
 
 // Iniciar el servidor
-const PORT = 3008;
+const PORT = process.env.PORT || 3008;
 app.listen(PORT, () => {
   console.log(`API de Biblioteca corriendo en http://localhost:${PORT}`);
 });
